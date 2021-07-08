@@ -14,35 +14,71 @@
 </body>
 </html>
 
-<form method="post" id="authForm" action="https://www.tistory.com/auth/login">
-    <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
-    <fieldset>
-      <legend class="screen_out">로그인 정보 입력폼</legend>
-      <div class="box_login">
-        <div class="inp_text">
-          <label for="loginId" class="screen_out">아이디</label>
-          <input type="email" id="loginId" name="loginId" placeholder="ID" >
+<form name="registerform" method="post" enctype="multipart/form-data" action="./register">
+        <div class="fieldlabel"><label for="userId">아이디</label></div>
+        <div class="formfield"><input type="text" id="userId" name="userId" maxlength="20" value=""></div>
+        <div class="fieldlabel"><label for="userPw">패스워드</label></div>
+        <div class="formfield">
+<input type="password" id="userPw" name="userpPw" maxlength="20" autocomplete="off">
+</div>
+        <div class="fieldlabel"><label for="userPwCheck">패스워드확인</label></div>
+        <div class="formfield">
+<input type="password" id="userPwCheck" name="userPwCheck" maxlength="20" autocomplete="off">
+</div>
+        <div class="fieldlabel"><label for="userName">이름</label></div>
+        <div class="formfield"><input type="text" id="userName" name="userName" maxlength="20" value=""></div>
+        <div class="fieldlabel"><label for="nickName">닉네임</label></div>
+        <div class="formfield"><input type="text" id="nickName" name="nickName" maxlength="20" value=""></div>
+
+        <div class="fieldlabel"><label for="email01">이메일</label></div>
+        <div class="formfield"><input type="text" id="email01" name="email01" size="20" maxlength="20" 
+             value="" autocomplete="off"><span>@</span>
+            <input id="email02" name="email02" list="domains" placeholder="도메인입력/선택">
+            <datalist id="domains">
+                <option value="naver.com">
+                <option value="daum.net">
+                <option value="gmail.com">
+                <option value="yahoo.co.kr">
+            </datalist>
         </div>
-        <div class="inp_text">
-          <label for="loginPw" class="screen_out">비밀번호</label>
-          <input type="password" id="loginPw" name="password" placeholder="Password" >
+        <div class="fieldlabel"><label>이메일수신</label></div>
+        <div class="formfield">
+            <input type="radio" name="emailYn" value="Y" checked>수신
+            <input type="radio" name="emailYn" value="N">미수신
         </div>
-      </div>
-      <button type="submit" class="btn_login"  disabled>로그인</button>
-      <div class="login_append">
-        <div class="inp_chk"> <!-- 체크시 checked 추가 -->
-          <input type="checkbox" id="keepLogin" class="inp_radio"  name="keepLogin">
-          <label for="keepLogin" class="lab_g">
-<span class="img_top ico_check"></span>
-<span class="txt_lab">로그인 상태 유지</span>
-  </label>
+        <div class="fieldlabel"><label>SMS수신</label></div>
+        <div class="formfield">
+            <input type="radio" name="smsYn" value="Y"checked>수신
+            <input type="radio" name="smsYn" value="N">미수신
         </div>
-        <span class="txt_find">
-           <a href="/member/find/loginId" class="link_find">아이디</a>
-            / 
-           <a href="/member/find/password" class="link_find">비밀번호 찾기</a>
-         </span>
-      </div>
-      
-    </fieldset>
-  </form>
+        <div class="fieldlabel"><label for="mPhone1">연락처</label></div>
+        <div class="formfield">
+            <select id="mPhone1" name="mPhone1">
+                <option value="010" selected>010</option>
+                <option value="011">011</option>
+                <option value="016">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+            </select>-
+            <input id="mPhone2" name="mPhone2" type="number" value="" size="4" maxlength="4" autocomplete="off">-
+            <input id="mPhone3" name="mPhone3" type="number" value="" size="4" maxlength="4" autocomplete="off">
+        </div>
+        <div class="fieldlabel"><label>취미</label></div>
+        <div class="formfield">
+            <input type="checkbox" name="hobby" value="독서" alt="취미" checked>독서
+            <input type="checkbox" name="hobby" value="낚시" alt="취미" checked>낚시
+            <input type="checkbox" name="hobby" value="수영" alt="취미">수영
+        </div>
+        <div class="fieldlabel"><label>성별</label></div>
+        <div class="formfield">
+            <input type="radio" name="sex" value="남" alt="남자" checked >남자
+            <input type="radio" name="sex" value="여" alt="여자" >여자
+        </div>
+        <div class="fieldlabel"><label for="profile">프로필사진</label></div>
+        <div class="formfield">
+            <input type="file" id="profile" name="profile" required>
+        </div>
+        <div class="btnfield">
+            <input type="submit" value="회원가입">
+        </div>
+ </form>
