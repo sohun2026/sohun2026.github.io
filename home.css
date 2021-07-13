@@ -57,9 +57,8 @@ body{
 
 .button-wrap {
     width: 230px;
-    margin: 450px auto;
+    margin: 320px auto;
     position: relative;
-    box-shadow: 0 0 600px 9px white;
     border-radius: 30px;
     text-align: center;
 }
