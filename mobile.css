@@ -42,7 +42,7 @@ body{
 }
 #top_gnb{
     position: relative;
-    bottom: -520px;
+    bottom: -560px;
     overflow: hidden;
     border-bottom: 1px solid #fcae8f;
     background-color: #fcae8f;
