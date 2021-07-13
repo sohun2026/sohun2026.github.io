@@ -8,42 +8,25 @@
     <link rel = "stylesheet" media="(max-width: 480px)" href="mobile.css" />
 </head>
 <body>
-<div class="header">
-    <h1> Devpools </h1>
-    <p> 개발자들의 놀이터 </p>
-</div>   
+    <input id="toggle" type="checkbox" />
+    <div id="wrap">
+        <header id="main_header">
+            <a class="left" href="#">Main </a>
+            <h1> 건강관리 </h1>
+            <label for="toggle" class="right"> </label> 
+        </header>
 
-<div class="nav">
-    <a href="#">Alex </a>
-    <a href="#">Chris </a>
-    <a href="#">Tiffany </a>
-</div>  
-
-<div class="row">
-    <div class="left">
-        <div class="card">
-            <h2>[Github Trends] 2018년 6월 깃허브 트렌드 </h2>
-            <h5> GitHub Trends (6월 2주) </h5>
-            <div class="fakeimg" style="height: 200px;"> Image</div>
-            <h5>1. ry/ deno </h5>
-                <p> 이번주에 8,792번의 스타를 받은 TypeScript 리포지터리 입니다. </p>
-                <p> 내용 1 </p>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+            </div>
         </div>
+            <nav id="top_gnb">
+        <div><a href="#">홈</a></div>
+        <div><a href="#">검색</a></div>
+        <div><a href="#">업로드</a></div>
+        <div><a href="#">사용자</a></div>
+    </nav>
 </div> 
-
-    <div class="right">
-        <div class="card">
-            <h2> 개발 바보들이란</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <h2> 개발 바보들이란</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p> 개발만 좋아하는 바보들이 모였다.</p>
-        </div>
-    </div>
-</div>  
-
-<div class="footer">
-    <h3> link: http://keen.devpools.kr </h3>
-</div>
 </body>
 </html>
+      
