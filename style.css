@@ -19,6 +19,7 @@
     position: relative;
     box-shadow: 0 0 600px 9px white;
     border-radius: 30px;
+    text-align: center;
 }
 .togglebtn {
     padding: 10px 30px;
