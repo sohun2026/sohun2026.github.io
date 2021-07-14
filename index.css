@@ -27,7 +27,7 @@ input {
     height: 50px;
     background-color: #f57a51;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'font', sans-serif;
     transition-duration: 0.5s;
     cursor: pointer;
