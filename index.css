@@ -11,23 +11,23 @@ html {
     text-align: center;
 }
 input {
-    width: 50%;
+    width: 250px;
     height: 50px;
     border: 2px solid black;
     padding-left: 10px;
 }
 #id_ {
-    font-size: 20px;
+    font-size: 15px;
 }
 #pass_ {
-    font-size: 20px;
+    font-size: 15px;
 }
 #submit {
-    width: 200px;
+    width: 100px;
     height: 75px;
     background-color: #f57a51;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'font', sans-serif;
     transition-duration: 0.5s;
     cursor: pointer;

@@ -12,13 +12,13 @@
     <h1>아이디</h1>
 
     <form id="idform">
-        <input type="id" name="id" id="id_" placeholder="아이디를 입력해주세요..." required>
+        <input type="id" name="id" id="id_" placeholder="아이디" required>
     </form>
 
     <h1>패스워드</h1>
 
     <form id="passform">
-        <input type="password" name="pass" id="pass_" placeholder="비밀번호를 입력해주세요..." required>
+        <input type="password" name="pass" id="pass_" placeholder="비밀번호" required>
     </form>
     <br>
     <br>
@@ -30,7 +30,7 @@
         document.getElementById('submit').onclick = function() {
             var ID = document.getElementById('id_').value;
             var pass = document.getElementById('pass_').value;
-            if (ID === "1234" && pass === "1234") {
+            if (ID === "sohyun" && pass === "1234") {
 	            window.location.href = "home.html";	
             }
             else {
