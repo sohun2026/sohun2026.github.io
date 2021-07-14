@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = "stylesheet"  href="index.css" />
+    <link rel = "stylesheet"  href="home.css" />
+    <title>영양성분 판별</title>
 </head>
 <body>
-    <div>Teachable Machine Image Model</div>
+    <div id="wrap">
+        <header id="main_header">
+            <h1> 건강관리 </h1>
+        </header>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -79,9 +84,9 @@
             labelContainer.childNodes[0].innerHTML = "물냉면 100g당 <br> 칼로리: 96kcal, 탄수화물: 16.14g, 단백질: 4.13g, 지방: 1.44g"
        } else 
        {
-            labelContainer.childNodes[0].innerHTML = "알수없음"
+            labelContainer.childNodes[0].innerHTML = "판별불가"
        } 
-       
+    
     
     }
 </script>
