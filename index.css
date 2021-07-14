@@ -5,13 +5,13 @@
 }
 h1 {
     font-family: 'font', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 html {
     text-align: center;
 }
 input {
-    width: 250px;
+    width: 300px;
     height: 50px;
     border: 2px solid black;
     padding-left: 10px;
@@ -23,8 +23,8 @@ input {
     font-size: 15px;
 }
 #submit {
-    width: 100px;
-    height: 75px;
+    width: 80px;
+    height: 50px;
     background-color: #f57a51;
     color: white;
     font-size: 20px;
