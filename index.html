@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="home.css">
-    <title>로그인</title>
+    <title>SHA-256</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>        
     <div id="wrap">
     <header id="main_header">
@@ -35,23 +38,88 @@
     <form id="passform">
         <input type="password" name="pass" id="pass_" placeholder="비밀번호" required>
     </form>
+    
+        <br>
+    <div> <span id="result"></span></div>
     <br>
     <br>
 
     <button id="submit">로그인</button>
 
+    <script>
+
+        function sha256(str) {
+
+            var buffer = new TextEncoder("utf-8").encode(str);
+
+            return crypto.subtle.digest("SHA-256", buffer).then(function (hash) {
+
+                return hex(hash);
+
+            });
+
+        }
+
+
+
+        function hex(buffer) {
+
+            var hexCodes = [];
+
+            var view = new DataView(buffer);
+
+            for (var i = 0; i < view.byteLength; i += 4) {
+
+                var value = view.getUint32(i)
+
+                var stringValue = value.toString(16)
+
+                var padding = '00000000'
+
+                var paddedValue = (padding + stringValue).slice(-padding.length)
+
+                hexCodes.push(paddedValue);
+
+            }
+
+            return hexCodes.join("");
+
+        }
+
+
+
+        $(document).ready(function(){
+
+            $("#submit").click(function(){
+
+                sha256($("#pass_").val()).then(function(digest) {
+
+                    $("#result").text(digest);
+
+                });
+
+            });
+
+        });
+
+    </script>
     <script type="text/javascript"> //JS
         document.getElementById('submit').onclick = function() {
             var ID = document.getElementById('id_').value;
             var pass = document.getElementById('pass_').value;
+            
             if (ID === "sohyun" && pass === "1234") {
-	            window.location.href = "달력.html";	
+                window.location.href = "달력.html";	
             }
             else {
                 alert("다시 로그인하세요.")
             }
-        }
-    
-    </script>
+    }
+
+</script>
+
 </body>
+
 </html>
+
+	
