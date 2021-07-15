@@ -4,7 +4,9 @@
     font-family: sans-serif;
 
 }
-
+html {
+    text-align: center;
+}
 #main_header{
     height: 45px; background-color: #f79d79;
     position: fixed;
