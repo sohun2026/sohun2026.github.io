@@ -4,6 +4,13 @@
     font-family: sans-serif;
 
 }
+table 
+{
+	width: 800px;
+	height: 700px;
+	border: 1px solid #444444;
+	border-collapse: collapse;
+}
 
 #main_header{
     height: 45px; background-color: #f79d79;

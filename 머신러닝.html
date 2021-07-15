@@ -9,11 +9,26 @@
     <title>영양성분 판별</title>
 </head>
 <body>
-    <div id="wrap">
-        <header id="main_header">
-            <h1> 건강관리 </h1>
-        </header>
-<button type="button" onclick="init()">Start</button>
+        <div id="wrap">
+                <header id="main_header">
+                    <h1> 건강관리 </h1>
+                </header>
+        
+                <div id="toggle_gnb_wrap">
+                    <div id="toggle_gnb">
+                    </div>
+                </div>
+                    <nav id="top_gnb">
+                <div><a href="calendar.html">홈</a></div>
+                <div><a href="머신러닝.html">검색</a></div>
+                <div><a href="#">업로드</a></div>
+                <div><a href="소통.html">소통</a></div>
+            </nav>
+        </div> 
+    </body>
+<button type="button" onclick="init()">카메라</button>
+
+
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -23,6 +38,9 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
+   
+
+    
     const URL = "./my_model/";
 
     let model, webcam, labelContainer, maxPredictions;

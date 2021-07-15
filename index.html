@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;
     <meta name="viewport" content="width=device-width, initial-scale=1.0,media=(max-width: 480px)">
     <link rel="stylesheet" href="index.css">
     <title>로그인</title>
@@ -25,8 +25,7 @@
 
     <button id="submit">로그인</button>
 
-    <!--JAVASCRIPT START-->
-    <script> //JS
+    <script type="text/javascript"> //JS
         document.getElementById('submit').onclick = function() {
             var ID = document.getElementById('id_').value;
             var pass = document.getElementById('pass_').value;
@@ -37,6 +36,7 @@
                 alert("다시 로그인하세요.")
             }
         }
+    
     </script>
 </body>
 </html>
