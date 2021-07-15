@@ -13,7 +13,12 @@ table
 html {
 text-align: center;
 }   
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
 #main_header{
     height: 45px; background-color: #f79d79;
     position: fixed;

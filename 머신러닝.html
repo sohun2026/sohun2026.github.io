@@ -13,6 +13,9 @@
         <header id="main_header">
             <h1> 건강관리 </h1>
         </header>
+        <br>
+        <br>
+        <br>
         <button type="button" onclick="init()">카메라</button>
         <div id="toggle_gnb_wrap">
             <div id="toggle_gnb">
@@ -84,6 +87,7 @@
         if(prediction[0].className == "만두" && prediction[0].probability.toFixed(2) == 1.00)
        {
             labelContainer.childNodes[0].innerHTML = "만두 100g당 <br> 칼로리: 124kcal, 탄수화물: 20.22g, 단백질: 3.3g, 지방: 3.21g"
+         
        } else if (prediction[1].className == "토마토" && prediction[1].probability.toFixed(2) == 1.00)
        {
             labelContainer.childNodes[0].innerHTML = "토마토 100g당 <br> 칼로리: 18kcal, 탄수화물: 3.92g, 단백질: 0.88g, 지방: 0.2g"
@@ -103,8 +107,7 @@
        {
             labelContainer.childNodes[0].innerHTML = "판별불가"
        } 
-    
-    
+        
     }
 </script>
 
