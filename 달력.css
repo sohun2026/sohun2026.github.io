@@ -60,7 +60,7 @@
   .dates {
     display: flex;
     flex-flow: row wrap;
-    height: 350px;
+    height: 260px;
     border-top: 1px solid #333333;
     border-right: 1px solid #333333;
   }
@@ -110,7 +110,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    min-height: 4vh;
+    min-height: 3vh;
     background-color: white;
     width: 150px;
     top:70%;
