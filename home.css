@@ -13,6 +13,7 @@
     left: 0;
     text-align: center;
     line-height: 45px;
+    font-size: 15px !important; color: white;
 }
 
 #main_header h1{color: white;}
