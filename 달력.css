@@ -105,3 +105,14 @@
     transform: translate(-50%, -50%);
     content: '';
   }
+
+  .submit{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    min-height: 4vh;
+    background-color: white;
+    width: 150px;
+    top:60%;
+    left: 42%;
+  }
