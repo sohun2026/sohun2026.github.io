@@ -1,4 +1,4 @@
-const date = new Date();
+let date = new Date();
 
 const renderCalender = () => {
 
@@ -26,7 +26,9 @@ const renderCalender = () => {
         }
       }
       
-
+      for (let i = 1; i < 7 - TLDay; i++) {
+        nextDates.push(i);
+      }
     const dates= prevDates.concat(thisDates, nextDates);
     const firstDateIndex = dates.indexOf(1);
     const lastDateIndex = dates.lastIndexOf(TLDate);
@@ -65,6 +67,6 @@ const nextMonth = () => {
 }
 
 const goToday = () => {
-    let=new Date();
+    date =new Date();
     renderCalender();
 }
