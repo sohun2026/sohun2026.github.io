@@ -4,8 +4,20 @@
     font-family: sans-serif;
 
 }
+table
+{
+    border:1px solid #BDBDBD;
+    text-align:center;
+    width:30%;
+}
 html {
-    text-align: center;
+text-align: center;
+}   
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 #main_header{
     height: 45px; background-color: #f79d79;
