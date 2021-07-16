@@ -16,21 +16,22 @@ li{
 }
 
 body{
-    background: rgb(245, 241, 241);
+    background: white;
 }
 
 .main{
-    background: rgb(238,126,195);
+    background: rgb(17, 17, 17);
     background: linear-gradient(74deg, rgba(238,126,195,1) 9%, rgba(149,175,213,0.981127485173757) 100%);
-    width: 698px;
+    width: 700px;
+
     margin: 50px auto 0;
-    padding: 20px 0px 20px 25px;
+    padding: 0px 0px 20px 25px;
     border-radius: 10px;
 }
 
 .main .main-title{
-    padding: 20px;
-    color: #fff;
+    padding: 5px;
+    color: black;
     text-align: center;
 }
 
