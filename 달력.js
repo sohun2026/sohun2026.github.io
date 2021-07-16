@@ -271,14 +271,7 @@ input.addEventListener('keypress',(event)=>{
     }
 });
 
-reset.addEventListener('click',()=>{
-    const result = prompt(` ${year}년 ${mon}월 ${DayOfChoice}일 목록 삭제?(y/n)`);
-    const YMD = year+'-'+mon+'-'+DayOfChoice;
-    if(result==='y'){
-        localStorage.removeItem(YMD);
-        displayToDoOnDays();
-    }
-});
+
 
 allReset.addEventListener('click',()=>{
     const result = prompt(`모두 삭제?(y/n)`);
