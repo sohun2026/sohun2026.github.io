@@ -74,7 +74,7 @@
 
                 var stringValue = value.toString(16)
 
-                var padding = '00000000'
+                var padding = '84532184'
 
                 var paddedValue = (padding + stringValue).slice(-padding.length)
 
@@ -107,8 +107,9 @@
         document.getElementById('submit').onclick = function() {
             var ID = document.getElementById('id_').value;
             var pass = document.getElementById('pass_').value;
-            
-            if (ID === "sohyun" && pass === "1234") {
+            var sha = document.getElementById('result').value;
+
+            if (sha === "result" ) {
                 window.location.href = "달력.html";	
             }
             else {

@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="운동.css">
+
     <title>비만도계산기</title>
 </head>
 <body>
@@ -24,5 +27,37 @@
             <div><a href="소통.html">소통</a></div>
         </nav>
     </div> 
+    <br>
+    <br>
+    <br>
+    <h1>키</h1>
+
+    <p>
+        <input type="number" id="height"/> cm 
+    </p>
+    <br>
+    <h1>몸무게</h1>
+ 
+    <p> 
+        <input type="number" id="weight"/> kg 
+    </p> 
+    <br>
+    <p> 
+        당신의 체질량지수는 <output id="bmi">?</output>입니다. 
+    </p> 
+    <br>
+    <input type="button" id="button" value="계산"/>
+
+    <script>
+        window.onload = function(){ 
+            document.getElementById("button").onclick = function()
+            { var h = parseFloat(document.getElementById("height").value);
+             var w = parseFloat(document.getElementById("weight").value); 
+             var bmi = document.getElementById("bmi"); 
+             bmi.innerHTML = (w/((h*h)/10000)).toFixed(1); 
+        }
+    }
+    </script>
+
 </body>
 </html>
