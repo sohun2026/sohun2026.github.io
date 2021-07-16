@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="home.css">
     <title>SHA-256</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -107,9 +106,8 @@
         document.getElementById('submit').onclick = function() {
             var ID = document.getElementById('id_').value;
             var pass = document.getElementById('pass_').value;
-            var sha = document.getElementById('result').value;
-
-            if (sha === "result" ) {
+            var result = document.getElementById('result').value;
+            if (ID === "sohyun" && pass === "1234") {
                 window.location.href = "달력.html";	
             }
             else {

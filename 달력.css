@@ -1,118 +1,247 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+*{
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-  }
-    
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  .calendar {
-    width: 600px;
-    margin: 50px;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .year-month {
-    font-size: 25px;
-  }
-  
-  .nav {
-    display: flex;
-    border: 1px solid #333333;
-    border-radius: 5px;
-  }
-  
-  .nav-btn {
-    width: 28px;
-    height: 30px;
-    border: none;
-    font-size: 16px;
-    line-height: 34px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .go-today {
-    width: 75px;
-    border-left: 1px solid #333333;
-    border-right: 1px solid #333333;
-  }
-  .days {
-    display: flex;
-    margin: 25px 0 10px;
-  }
-  
-  .day {
-    width: calc(100% / 7);
-    text-align: center;
-  }
-  
-  .dates {
-    display: flex;
-    flex-flow: row wrap;
-    height: 260px;
-    border-top: 1px solid #333333;
-    border-right: 1px solid #333333;
-  }
-  
-  .date {
-    width: calc(100% / 7);
-    padding: 15px;
-    text-align: right;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #333333;
-  }
-
-.day:nth-child(7n + 1),
-.date:nth-child(7n + 1) {
-  color: #D13E3E;
 }
 
-.day:nth-child(7n),
-.date:nth-child(7n) {
-  color: #396EE2;
-}
-
-.other {
-    opacity: .3;
-  }
-
-  .today {
-    position: relative;
-    color: #FFFFFF;
-  }
-  
-  .today::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
+.clearfix::after{
+    content: ' ';
     display: block;
-    width: 30px;
-    height: 30px;
-    background-color: #FF0000;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    content: '';
-  }
+    clear: both;
+}
 
-  .submit{
+li{
+    list-style: none;
+}
+
+body{
+    background: rgb(245, 241, 241);
+}
+
+.main{
+    background: white;
+    background: linear-gradient(74deg, rgba(238,126,195,1) 9%, rgba(149,175,213,0.981127485173757) 100%);
+    width: 400px;
+    margin: 10px auto 0;
+    padding: 20px 0px 20px 20px;
+    border-radius: 10px;
+}
+
+.main .main-title{
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.main .day{
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.main .day li{
+    float: left;
+    background: white;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    margin-top: 10px;
+}
+
+.main .day li:last-child{
+    margin-right: 0;
+}
+
+.main .day li:hover{
+    cursor: pointer;
+    transition: all .2s;
+    transform: scale(1.08);
+}
+
+.month{
+    color: #fff;
+    font-size: 22px;
+    text-align:center;
+    margin-left: -25px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.month .fas{
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.month .fas:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.month .fa-chevron-left{
+    float: left;
+    margin-left: -150px;
+}
+
+.month .fa-chevron-right{
+    float: right;
+    margin-right: -150px;
+}
+
+.dayCount .dayCount-list li{
+    font-size: 10px;
+    float: left;
+    width: 94px;
+    color: #fff;
+}
+
+.sun,.sat{
+    color: red;
+}
+
+.none{
+    display: none;
+}
+
+.todo{
+    width: 400px;
+    margin: 5px auto 100px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.textToDo{
+    margin-top: 20px;
+}
+
+.textToDo .textToDo-text[type="text"]{
+    border: none;
+    border: 3px solid rgb(222, 140, 229);
+    border-radius: 10px;;
+    padding: 5px 20px;
+    width: 300px;
+}
+
+.textToDo .textToDo-text[type="text"]:focus{
+    outline: none;
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+}
+
+.textToDo .textToDo-button{
+    margin-left: 10px;
+    margin: 5px;
+    border: none;
+    border: 3px solid rgb(222, 140, 229);
+    padding: 6px 10px;
+    background: white;
+    border-radius: 20px;
+    transition: all .2s;
+}
+
+.textToDo .textToDo-button:focus{
+    outline: none;
+}
+
+.textToDo .textToDo-button:hover{
+    cursor: pointer;
+    transition: all .2s;
+    transform: scale(1.1);
+}
+
+.todoList{
+    padding: 10px;
+}
+
+.todoList li{
+    padding: 8px;
+    border-bottom: 1px solid gray;
+}
+
+.deleteBtn{
+    border: none;
+    float: right;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.deleteBtn:focus{
+    outline:none;
+}
+
+.deleteBtn:hover{
+    transition: all .2s;
+    transform: scale(1.2);
+}
+
+#main_header{
+    height: 45px; background-color: #f79d79;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    text-align: center;
+    line-height: 45px;
+    font-size: 15px !important; color: white;
+}
+
+#main_header h1{color: white;}
+#main_header > a, #main_header > label {
+    display: block;
+    height: 32px;
     position: absolute;
-    justify-content: center;
-    align-items: center;
-    min-height: 3vh;
-    background-color: white;
-    width: 150px;
-    top:70%;
-    left:30%;
-  }
+}
+#main_header > a.left{
+    width: 62px;
+    left: 5px; top: 7px;
+}
+#main_header > label.right{
+    width: 32px;
+    right: 10px; top: 7px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.left, .right {
+    width: 100%;
+    padding: 0;
+}
+
+.nav a{
+    float: none;
+    width: 100%;
+}
+#top_gnb{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #fcae8f;
+    background-color: #fcae8f;
+}
+
+#top_gnb > div > a{
+    float: left;
+    width: 25%; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white; font-weight: bold;
+}
+
+.button-wrap {
+    width: 230px;
+    margin: 320px auto;
+    position: relative;
+    border-radius: 30px;
+    text-align: center;
+}
+
+table 
+{
+	width: 800px;
+	height: 700px;
+	border: 1px solid #444444;
+	border-collapse: collapse;
+}

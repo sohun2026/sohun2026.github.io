@@ -2,10 +2,12 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="달력.css">
-    <link rel = "stylesheet"  href="style.css" />
-    <title>달력</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
+    <title>Calendar - 달력</title>
+    <link rel="stylesheet" href="기록.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c92986acdf.js" crossorigin="anonymous"></script>
+    <script src="달력.js" defer></script>
 </head>
 <body>
     <div id="wrap">
@@ -23,31 +25,48 @@
         <div><a href="운동.html">운동</a></div>
         <div><a href="소통.html">소통</a></div>
     </nav>
-    <button class="submit" onclick="location.href='기록추가.html'"> 운동 기록 추가하기</button>
-</div> 
-    <div class="calendar">
-        <div class="header">
-            <div class="year-month"></div>
-            <div class="nav">
-                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-                <button class="nav-btn go-today" onclick="goToday()">Today</button>
-                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
-              </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="main">
+        <h1 class="main-title"></h1>
+        <div class="month clearfix">
+            <span class="left">
+                <i class="fas fa-chevron-left left"></i>
+            </span>
+            <span class="right">
+                <i class="fas fa-chevron-right right"></i>
+            </span>
+            <p class="month-name"></p>
         </div>
-        <div class="main">
-            <div class="days">
-                <div class="day">일</div>
-                <div class="day">월</div>
-                <div class="day">화</div>
-                <div class="day">수</div>
-                <div class="day">목</div>
-                <div class="day">금</div>
-                <div class="day">토</div>
-            </div>
-            <div class="dates"></div>
+        <div class="dayCount">
+            <ul class="dayCount-list clearfix">
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+                <div class="dayCount"></div>
+            </ul>
         </div>
-    </div>
+        <ul class="day clearfix">
+          
+        </ul> 
+    </section>
+    <section class="todo">
+        <h1 class="todo-title">
+            오늘의 운동기록
+        </h1>
+        <div class="textToDo">
+            <input type="text" class="textToDo-text">
+            <button class="textToDo-button add">추가</button>
+            <button class="textToDo-button reset">삭제</button>
+            <button class="textToDo-button allreset">모두삭제</button>
+        </div>
+        <ul class="todoList"></ul>
+    </section>
 
-    <script src="달력.js"></script>
 </body>
 </html>
