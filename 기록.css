@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Epilogue', sans-serif;
 }
 
 .clearfix::after{
@@ -16,22 +15,21 @@ li{
 }
 
 body{
-    background: white;
+    background: rgb(245, 241, 241);
 }
 
 .main{
-    background: rgb(17, 17, 17);
+    background: white;
     background: linear-gradient(74deg, rgba(238,126,195,1) 9%, rgba(149,175,213,0.981127485173757) 100%);
-    width: 700px;
-
-    margin: 50px auto 0;
-    padding: 0px 0px 20px 25px;
+    width: 400px;
+    margin: 0px auto 0;
+    padding: 20px 0px 20px 20px;
     border-radius: 10px;
 }
 
 .main .main-title{
-    padding: 5px;
-    color: black;
+    padding: 0px;
+    color: #fff;
     text-align: center;
 }
 
@@ -43,9 +41,9 @@ body{
 .main .day li{
     float: left;
     background: white;
-    padding: 10px;
-    width: 80px;
-    height: 80px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
     margin-right: 14px;
     margin-top: 10px;
 }
