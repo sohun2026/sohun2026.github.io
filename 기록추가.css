@@ -1,0 +1,18 @@
+#submit{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    min-height: 3vh;
+    background-color: white;
+    width: 150px;
+    top:70%;
+    left:30%;
+  }
+
+#submit:hover {
+    background-color:#f79d7f;
+}
+
+.input-div{
+    vertical-align: middle;
+ }
