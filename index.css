@@ -23,7 +23,7 @@ input {
 #submit {
     width: 120px;
     height: 50px;
-    background-color: #f57a51;
+    background-color: rgb(89, 138, 211);
     color: white;
     font-size: 20px;
     font-family: 'font', sans-serif;
@@ -31,7 +31,7 @@ input {
     cursor: pointer;
 }
 #submit:hover {
-    background-color:#f79d7f;
+    background-color:rgb(89, 138, 211);
 }
 
 * {
