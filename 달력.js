@@ -155,7 +155,7 @@ function preMonthOrYear(){
 function main(){
     setMonthTitle(year,mon);
     makeCalendar(year,mon,getDayOfMon(mon,year));
-    todoTitle.textContent = `오늘의 운동 목록 ${year}.${mon}.${currentDay}`;
+    todoTitle.textContent = `오늘의 운동 기록 ${year}.${mon}.${currentDay}`;
     displayToDoOnDays();
 }
 
@@ -210,7 +210,7 @@ Day.addEventListener('click',(event)=>{
     if(event.target.tagName==='UL')return;
     if(event.target.className!=='disabled'){
         clearEvent();
-        todoTitle.textContent = `오늘의 운동 기록 ${year}.${mon}.${event.target.textContent}`;
+        todoTitle.textContent = `운동 기록 ${year}.${mon}.${event.target.textContent}`;
         event.target.style.border='3px solid red';
         DayOfChoice = (event.target.textContent)*1;
         MonOfChoice = mon;

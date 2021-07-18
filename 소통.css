@@ -126,7 +126,7 @@ body{
 
 #top_gnb > div > a{
     float: left;
-    width: 25%; height: 30px;
+    width: 20%; height: 30px;
     line-height: 30px;
     text-align: center;
     color: white; font-weight: bold;

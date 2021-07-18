@@ -22,7 +22,8 @@ text-align: center;
     left: 0;
     text-align: center;
     line-height: 45px;
-    font-size: 15px !important; color: white;
+    font-size: 30px !important; color: white;
+    font-weight: bold;
 }
 
 #main_header h1{color: white;}
