@@ -13,7 +13,6 @@ table
 html {
 text-align: center;
 }   
-
 #main_header{
     height: 45px; background-color: rgb(89, 138, 211);
     position: fixed;
@@ -22,8 +21,7 @@ text-align: center;
     left: 0;
     text-align: center;
     line-height: 45px;
-    font-size: 30px !important; color: white;
-    font-weight: bold;
+    font-size: 15px !important; color: white;
 }
 
 #main_header h1{color: white;}
