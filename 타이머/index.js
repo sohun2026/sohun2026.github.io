@@ -164,7 +164,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
     completBtn.classList = 'main__completeBtn';
     completBtn.id = `jsCompleteBtn${newSetId}`;
     newSetId++;
-    completBtn.textContent = 'COMPLETE';
+    completBtn.textContent = '완료';
     function inputCurrentWatchOthers() {
       divStopWatch.textContent = jsMainStopWatch.textContent;
       completBtn.removeEventListener('click', inputCurrentWatchOthers);
