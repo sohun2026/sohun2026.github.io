@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+}
+.box {
+    max-width: 800px;
+    padding : 30px;
+    background-color: white;
+    margin : 0 auto;
+}
+div{
+    border: 2px solid white;
+    width: 100px;
+    
+}

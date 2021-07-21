@@ -6,23 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
     <link rel="stylesheet" href="index.css">
     <title>로그인</title>
+    <script src="C:\Users\user\Documents\boiler-plate\index.js" ></script>
+    <script src="C:\Users\user\Documents\boiler-plate\models\User.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>        
-    <div id="wrap">
-    <header id="main_header">
-        <h1> 건강관리 </h1>
-    </header>
-
-    <div id="toggle_gnb_wrap">
-        <div id="toggle_gnb">
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-
     <h4 style="font-size: 3em;">로그인</h4>
     <br>
     <h1>아이디</h1>
@@ -43,63 +32,11 @@
     <br>
 
     <button id="submit">로그인</button>
+      
 
     <script>
 
-        function sha256(str) {
-
-            var buffer = new TextEncoder("utf-8").encode(str);
-
-            return crypto.subtle.digest("SHA-256", buffer).then(function (hash) {
-
-                return hex(hash);
-
-            });
-
-        }
-
-
-
-        function hex(buffer) {
-
-            var hexCodes = [];
-
-            var view = new DataView(buffer);
-
-            for (var i = 0; i < view.byteLength; i += 4) {
-
-                var value = view.getUint32(i)
-
-                var stringValue = value.toString(16)
-
-                var padding = '00000000'
-
-                var paddedValue = (padding + stringValue).slice(-padding.length)
-
-                hexCodes.push(paddedValue);
-
-            }
-
-            return hexCodes.join("");
-
-        }
-
-
-
-        $(document).ready(function(){
-
-            $("#submit").click(function(){
-
-                sha256($("#pass_").val()).then(function(digest) {
-
-                    $("#result").text(digest);
-
-                });
-
-            });
-
-        });
-
+    
     </script>
     <script type="text/javascript"> //JS
         document.getElementById('submit').onclick = function() {
@@ -115,6 +52,7 @@
     }
 
 </script>
+
 
 </body>
 
