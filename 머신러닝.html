@@ -14,6 +14,7 @@
             <h1> 건강관리 </h1>
 
             <button type="button" onclick="init()">카메라</button>
+            <br><br><br>
         </header>
         <div id="toggle_gnb_wrap">
             <div id="toggle_gnb">
@@ -29,7 +30,7 @@
 </div> 
 
 
-
+<br><br><br><br><br><br><br>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script type="text/javascript">
@@ -49,7 +50,7 @@
     const URL = "./my_model/";
 
     let model, webcam, labelContainer, maxPredictions;
-
+    
     // Load the image model and setup the webcam
     async function init() {
         const modelURL = URL + "model.json";
@@ -76,7 +77,6 @@
             labelContainer.appendChild(document.createElement("div"));
         }
     }
-
     async function loop() {
         webcam.update(); // update the webcam frame
         await predict();
