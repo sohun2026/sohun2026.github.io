@@ -7,7 +7,7 @@
     content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
     <link rel="stylesheet" href="video.css">
     <link rel="stylesheet" href="/운동.css">
-    <title>Document</title>
+    <title>코어운동</title>
 </head>
 <body>
     <div id="wrap">
@@ -20,16 +20,16 @@
             </div>
         </div>
         <nav id="top_gnb">
-            <div><a href="달력.html">홈</a></div>
-            <div><a href="머신러닝.html">검색</a></div>
-            <div><a href="운동.html">운동</a></div>
-            <div><a href="소통.html">소통</a></div>
+            <div><a href="/달력.html">홈</a></div>
+            <div><a href="/머신러닝.html">검색</a></div>
+            <div><a href="/운동.html">운동</a></div>
+            <div><a href="/소통.html">소통</a></div>
             <div><a href="/타이머/타이머.html">타이머</a></div>
         </nav>
     </div>
-
+    <br> <br> <br>
+    <button onclick="history.back()">Back</button>
     <div class="box">
-        <br>
 		<h2>코어운동</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/hJuO1AUqLUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
@@ -42,7 +42,11 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZoenrFPVdTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 
-
+    <script type="text/javascript">
+        function goBack() {
+            window.histody.back();
+        }
+    </script>
 
 </body>
 </html>

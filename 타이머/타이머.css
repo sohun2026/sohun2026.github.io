@@ -4,12 +4,6 @@
     font-family: sans-serif;
 
 }
-table
-{
-    border:1px solid #BDBDBD;
-    text-align:center;
-    width:30%;
-}
 html {
 text-align: center;
 }   
@@ -21,7 +15,8 @@ text-align: center;
     left: 0;
     text-align: center;
     line-height: 45px;
-    font-size: 15px !important; color: white;
+    font-size: 30px !important; color: white;
+    font-weight: bold;
 }
 
 #main_header h1{color: white;}
@@ -78,10 +73,3 @@ body{
     text-align: center;
 }
 
-table 
-{
-	width: 800px;
-	height: 700px;
-	border: 1px solid #444444;
-	border-collapse: collapse;
-}

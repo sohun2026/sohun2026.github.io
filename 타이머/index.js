@@ -88,7 +88,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
 
   const labelWorkoutTitle = document.createElement('label');
   labelWorkoutTitle.classList.add('main__addWorkoutTitleText');
-  labelWorkoutTitle.textContent = 'Title';
+  labelWorkoutTitle.textContent = '운동';
   divTitle.appendChild(labelWorkoutTitle);
 
   const inputWorkoutTitle = document.createElement('input');
@@ -130,9 +130,9 @@ jsAddWorkoutBtn.addEventListener('click', e => {
     inputKg.classList.add('main__wrightBox');
     const spanKg = document.createElement('span');
     spanKg.classList.add('main__kgText');
-    spanKg.textContent = 'KG';
-    divKg.appendChild(inputKg);
+  
     divKg.appendChild(spanKg);
+  
 
     const divTimes = document.createElement('div');
     divTimes.classList.add('main__times');
@@ -140,7 +140,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
     inputTimes.classList.add('main__wrightBox');
     const spanTimes = document.createElement('span');
     spanTimes.classList.add('main__timesText');
-    spanTimes.textContent = 'TIMES';
+    spanTimes.textContent = '분';
     divTimes.appendChild(inputTimes);
     divTimes.appendChild(spanTimes);
 
@@ -150,7 +150,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
     inputSet.classList.add('main__wrightBox');
     const spanSet = document.createElement('span');
     spanSet.classList.add('main__setText');
-    spanSet.textContent = 'SET';
+    spanSet.textContent = '세트';
     divSet.appendChild(inputSet);
     divSet.appendChild(spanSet);
 
@@ -173,7 +173,6 @@ jsAddWorkoutBtn.addEventListener('click', e => {
     divComBtn.appendChild(completBtn);
 
     li.appendChild(divBtn);
-    li.appendChild(divKg);
     li.appendChild(divTimes);
     li.appendChild(divSet);
     li.appendChild(divStopWatch);
@@ -189,8 +188,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
   inputKg.classList.add('main__wrightBox');
   const spanKg = document.createElement('span');
   spanKg.classList.add('main__kgText');
-  spanKg.textContent = 'KG';
-  divKg.appendChild(inputKg);
+
   divKg.appendChild(spanKg);
 
   const divTimes = document.createElement('div');
@@ -199,7 +197,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
   inputTimes.classList.add('main__wrightBox');
   const spanTimes = document.createElement('span');
   spanTimes.classList.add('main__timesText');
-  spanTimes.textContent = 'TIMES';
+  spanTimes.textContent = '분';
   divTimes.appendChild(inputTimes);
   divTimes.appendChild(spanTimes);
 
@@ -209,7 +207,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
   inputSet.classList.add('main__wrightBox');
   const spanSet = document.createElement('span');
   spanSet.classList.add('main__setText');
-  spanSet.textContent = 'SET';
+  spanSet.textContent = '세트';
   divSet.appendChild(inputSet);
   divSet.appendChild(spanSet);
 
@@ -223,7 +221,7 @@ jsAddWorkoutBtn.addEventListener('click', e => {
   completBtn.classList = 'main__completeBtn';
   completBtn.id = `jsCompleteBtn${newSetId}`;
   newSetId++;
-  completBtn.textContent = 'COMPLETE';
+  completBtn.textContent = '완료';
   function inputCurrentWatchOthers() {
     divStopWatch.textContent = jsMainStopWatch.textContent;
     completBtn.removeEventListener('click', inputCurrentWatchOthers);
@@ -257,6 +255,7 @@ jsAddSetBtn.addEventListener('click', () => {
   divBtn.addEventListener('click', () => {
     li.parentNode.removeChild(li);
   });
+  
   divBtn.appendChild(minusBtn);
 
   const divKg = document.createElement('div');
@@ -265,9 +264,10 @@ jsAddSetBtn.addEventListener('click', () => {
   inputKg.classList.add('main__wrightBox');
   const spanKg = document.createElement('span');
   spanKg.classList.add('main__kgText');
-  spanKg.textContent = 'KG';
-  divKg.appendChild(inputKg);
+
   divKg.appendChild(spanKg);
+
+
 
   const divTimes = document.createElement('div');
   divTimes.classList.add('main__times');
@@ -275,7 +275,7 @@ jsAddSetBtn.addEventListener('click', () => {
   inputTimes.classList.add('main__wrightBox');
   const spanTimes = document.createElement('span');
   spanTimes.classList.add('main__timesText');
-  spanTimes.textContent = 'TIMES';
+  spanTimes.textContent = '분';
   divTimes.appendChild(inputTimes);
   divTimes.appendChild(spanTimes);
 
@@ -285,7 +285,7 @@ jsAddSetBtn.addEventListener('click', () => {
   inputSet.classList.add('main__wrightBox');
   const spanSet = document.createElement('span');
   spanSet.classList.add('main__setText');
-  spanSet.textContent = 'SET';
+  spanSet.textContent = '세트';
   divSet.appendChild(inputSet);
   divSet.appendChild(spanSet);
 
@@ -299,7 +299,7 @@ jsAddSetBtn.addEventListener('click', () => {
   completBtn.classList = 'main__completeBtn';
   completBtn.id = `jsCompleteBtn${newSetId}`;
   newSetId++;
-  completBtn.textContent = 'COMPLETE';
+  completBtn.textContent = '완료';
   function inputCurrentWatchOthers() {
     divStopWatch.textContent = jsMainStopWatch.textContent;
     completBtn.removeEventListener('click', inputCurrentWatchOthers);
