@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, target-densitydpi=medium-dpi,media=(max-width: 480px)">
+    <link rel="stylesheet" href="exercise.css">
+
+    <title>운동</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="main_header">
+            <h1> 건강관리 </h1>
+        </header>
+
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="calendar.html">홈</a></div>
+            <div><a href="food.html">검색</a></div>
+            <div><a href="exercise.html">운동</a></div>
+            <div><a href="notice.html">소통</a></div>
+            <div><a href="/타이머/timer.html">타이머</a></div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1>키</h1>
+
+    <p>
+        <input type="number" id="height" /> cm
+    </p>
+    <br>
+    <h1>몸무게</h1>
+
+    <p>
+        <input type="number" id="weight" /> kg
+    </p>
+    <br>
+    <p id="BMICheck"></p>
+    <br>
+    <input type="button" id="button" value="계산" />
+    <br>
+    <br>
+    <input type="button" id="button" onClick="location.href='/운동영상/video.html'" value="운동영상" />
+    <br>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("button").onclick = function () {
+                var h = parseFloat(document.getElementById("height").value);
+                var w = parseFloat(document.getElementById("weight").value);
+                var bmi = document.getElementById("bmi");
+                var result = (w / ((h * h) / 10000)).toFixed(1);
+            
+
+                if(result < 18.5){
+                document.querySelector("#BMICheck").innerText="저체중 입니다.";
+            }
+            else if(result >= 18.5 && result < 23){
+                document.querySelector("#BMICheck").innerText="정상체중 입니다.";
+            }
+            else if(result >= 23 && result < 25){
+                document.querySelector("#BMICheck").innerText="과체중 입니다.";
+            }
+            else if(result >= 25 && result < 30){
+                document.querySelector("#BMICheck").innerText="비만 입니다.";
+            }
+            else{
+                document.querySelector("#BMICheck").innerText="고도비만 입니다.";
+            }
+
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack(){window.history.forward();}
+       </script>
+</body>
+
+</html>

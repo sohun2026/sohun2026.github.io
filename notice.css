@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.feed_list {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed_layout {
+    border: 1px solid gray;
+    border-radius: 2px;
+    margin: 20px 0;
+}
+
+.feed_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.user_layout {
+    display: flex;
+    align-items: center;
+}
+
+.feed_user_profile_img1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 12px;
+    background: url("사진/꽃.jpg") no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+}
+
+.feed_user_profile_img2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 12px;
+    background: url("사진/산.jpg") no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+}
+
+.feed_user_profile_img3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 12px;
+    background: url("사진/바다.jpg") no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+}
+
+.user_layout p {
+    font-weight: 700;
+}
+
+.far{
+    color: black;
+}
+
+#main_header{
+    height: 45px; background-color: rgb(89, 138, 211);
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    text-align: center;
+    line-height: 45px;
+    font-size: 15px !important; color: white;
+}
+
+#main_header h1{color: white;}
+#main_header > a, #main_header > label {
+    display: block;
+    height: 32px;
+    position: absolute;
+}
+#main_header > a.left{
+    width: 62px;
+    left: 5px; top: 7px;
+}
+#main_header > label.right{
+    width: 32px;
+    right: 10px; top: 7px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.left, .right {
+    width: 100%;
+    padding: 0;
+}
+
+.nav a{
+    float: none;
+    width: 100%;
+}
+#top_gnb{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(89, 138, 211);
+    background-color: rgb(89, 138, 211);
+}
+
+#top_gnb > div > a{
+    float: left;
+    width: 20%; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white; font-weight: bold;
+}
+
+.button-wrap {
+    width: 230px;
+    margin: 320px auto;
+    position: relative;
+    border-radius: 30px;
+    text-align: center;
+}
+
+table 
+{
+	width: 800px;
+	height: 700px;
+	border: 1px solid #444444;
+	border-collapse: collapse;
+}

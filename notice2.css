@@ -1,0 +1,50 @@
+#form-commentInfo {
+    width: 100%;
+}
+
+#comment-count {
+    margin-bottom: 10px;
+}
+
+#comment-input {
+    width: 30%;
+    height: 50%;
+}
+
+#submit {
+    background-color: rgb(0, 128, 255);
+    width: 50px;
+    height: 20px;
+    font-size: 5px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+
+#comments {
+    margin-top: 0px;
+}
+
+.eachComment {
+    width: 40%;
+    margin: 0px;
+    padding: 0em;
+    border-bottom: 0.1px solid #c1bcba;
+}
+
+.eachComment .name {
+    font-size: 10px;
+    border: none;
+    float: right;
+}
+
+.eachComment .inputValue {
+    font-size: 15px;
+}
+
+.eachComment .deleteComment {
+    position: block;
+    margin-left: auto;
+    background-color: red;
+    color: aliceblue;
+}

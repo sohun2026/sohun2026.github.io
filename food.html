@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "stylesheet"  href="food.css" />
+    <title>영양성분</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="main_header">
+            <h1> 건강관리 </h1>
+
+            <button type="button" onclick="init()">카메라</button>
+            <br><br><br>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+            </div>
+        </div>
+            <nav id="top_gnb">
+                <div><a href="calendar.html">홈</a></div>
+                <div><a href="food.html">검색</a></div>
+                <div><a href="exercise.html">운동</a></div>
+                <div><a href="notice.html">소통</a></div>
+                <div><a href="/타이머/timer.html">타이머</a></div>
+    </nav>
+</div> 
+
+
+<br><br><br><br><br><br><br>
+<div id="webcam-container"></div>
+<div id="label-container"></div>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack(){window.history.forward();}
+   </script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    // More API functions here:
+    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+    // the link to your model provided by Teachable Machine export panel
+   
+
+    
+    const URL = "./my_model/";
+
+    let model, webcam, labelContainer, maxPredictions;
+    
+    // Load the image model and setup the webcam
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // or files from your local hard drive
+        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // Convenience function to setup a webcam
+        const flip = true; // whether to flip the webcam
+        webcam = new tmImage.Webcam(400, 400, flip); // width, height, flip
+        await webcam.setup(); // request access to the webcam
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        // append elements to the DOM
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) { // and class labels
+            labelContainer.appendChild(document.createElement("div"));
+        }
+    }
+    async function loop() {
+        webcam.update(); // update the webcam frame
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    // run the webcam image through the image model
+    async function predict() {
+        // predict can take in an image, video or canvas html element
+        const prediction = await model.predict(webcam.canvas);
+        if(prediction[0].className == "만두" && prediction[0].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "만두 100g당 <br> 칼로리: 124kcal, 탄수화물: 20.22g, 단백질: 3.3g, 지방: 3.21g"
+         
+       } else if (prediction[1].className == "토마토" && prediction[1].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "토마토 100g당 <br> 칼로리: 18kcal, 탄수화물: 3.92g, 단백질: 0.88g, 지방: 0.2g"
+       } else if (prediction[2].className == "바나나" && prediction[2].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "바나나 100g당 <br> 칼로리: 89kcal, 탄수화물: 22.84g, 단백질: 1.09g, 지방: 0.33g"
+       } else if (prediction[3].className == "계란" && prediction[3].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "계란 100g당 <br> 칼로리: 154kcal, 탄수화물: 1.12g, 단백질: 12.53g, 지방: 10.57g"
+       } else if (prediction[4].className == "치킨" && prediction[4].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "치킨 100g당 <br> 칼로리: 290kcal, 탄수화물: 9.98g, 단백질: 22.31g, 지방: 17.27g"
+       } else if (prediction[5].className == "냉면" && prediction[5].probability.toFixed(2) == 1.00)
+       {
+            labelContainer.childNodes[0].innerHTML = "물냉면 100g당 <br> 칼로리: 96kcal, 탄수화물: 16.14g, 단백질: 4.13g, 지방: 1.44g"
+       } else 
+       {
+            labelContainer.childNodes[0].innerHTML = "판별불가"
+       } 
+        
+    }
+</script>
+
+</body>
+</html>
